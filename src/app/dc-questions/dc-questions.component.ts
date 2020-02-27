@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Question } from "../../../models/DCquestions";
+import { Question, Answer } from "../../../models/DCquestions";
 
 @Component({
   selector: "app-dc-questions",
@@ -48,4 +48,15 @@ export class DcQuestionsComponent implements OnInit {
 
   askQuestion() {
     this.clicked = true;
-  }}
+  }
+onclick(){
+    this.questions
+  }
+
+
+
+}
+
+
+
+  

@@ -49,4 +49,6 @@ export class DcQuestionsComponent implements OnInit {
   askQuestion() {
     this.clicked = true;
   }
+
+  
 }

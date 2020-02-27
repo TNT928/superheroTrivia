@@ -5,16 +5,10 @@
 <div *ngIf="clicked">
     <div *ngFor="let question of questions">
             <h1 >{{question.question}}</h1>
-            <h2  *ngFor="let answer of question.answers">{{answer.answer}}
+            <h4  *ngFor="let answer of question.answers">{{answer.answer}}
               <input type="checkbox">  
-            </h2>
+            </h4>
     </div>
   
-   
-
 </div>
-
-<!-- <div >
-    {{q.question}}
-</div> -->
 

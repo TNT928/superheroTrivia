@@ -1,3 +1,43 @@
-#question {
-    background: white;
+h4 {
+    color: red;
+}
+
+button.choice {
+    background: none;
+    color: black;
+    border: none;
+    box-shadow: none;
+    display: flex;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    border-width: 5px;
+    border-color: black;
+    box-shadow: 0px 0px 5px black;
+    background-color: yellowgreen;
+}
+
+button:hover {
+    box-shadow: 0px 0px 50px yellow;
+    color: black;
+    background-color: white;
+}
+
+button:active {
+    box-shadow: 0px 0px 50px yellow;
+    color: black;
+    background-color: white;
+}
+
+.q-and-a {
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
 }

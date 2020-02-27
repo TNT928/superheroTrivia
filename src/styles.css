@@ -14,3 +14,58 @@ body {
     height: 100vh;
     width: 100vw;
 }
+h1 {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    margin: 25px;
+    text-shadow: 5px 5px 10px #000000;
+}
+h2 {
+    font-size: 50px;
+    text-align: center;
+    margin: 25px;
+}
+h3 {
+    font-size: 25px;
+    text-align: center;
+}
+.beginning {
+    width: 80vw;
+    margin: 25px auto;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    
+}
+button {
+    width: 250px;
+    height: 150px;
+    margin: 25px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    border-width: 5px;
+    border-color: black;
+    box-shadow: 0px 0px 5px black;
+}
+button:hover {
+    box-shadow: 0px 0px 100px yellow;
+    color: black;
+    background-color: white;
+}
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: rgb(0, 162, 255); 
+}
+.yellow {
+    background-color: rgb(255, 196, 0);
+}

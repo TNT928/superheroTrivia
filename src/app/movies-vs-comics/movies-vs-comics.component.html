@@ -1,17 +1,13 @@
 <h4>Welcome to the Movies Vs. Comics Quiz!</h4> 
 
-<div class="row">
-    <div class="column">
-        <img src="./marvel.jpg"/>
+<div>
+    <div>
+        <span>{{question.Question}}</span>
     </div>
-    <div class="column">
-
-        <form>
-            <h3>This is where the question goes</h3>
-            <input type="button">
-            <input type="button">
-            <input type="button">
-            <input type="button">
-        </form>
-    </div>
+    <button (click)="checkAnswer(answer,question)" *ngFor="let correct of question.answers">{{correct}}</button>
+    <button (click)="checkAnswer(answer,question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+    <button (click)="next()">Next Question</button>
 </div>
+
+<!--Click on answer button, which immediately responds with either correct
+or incorrect, button at bottom of -->

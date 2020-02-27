@@ -15,13 +15,15 @@ const AppRoutes: Routes = [
   // { path: 'dc', component: dc-component },
   // { path: 'comicsvsmovies', component: comics-vs-movies-component }
 ]
+import { DcQuestionsComponent } from './dc-questions/dc-questions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarvelComponent,
     MoviesVsComicsComponent,
-    MainPageComponent
+    MainPageComponent,
+    DcQuestionsComponent
   ],
   imports: [
     BrowserModule,

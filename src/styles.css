@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    box-sizing: border-box;
+}
 html {
     background-image: url(https://i.pinimg.com/736x/13/a1/0b/13a10b298c0ac605c79e73ef010fd7a4.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-* {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    box-sizing: border-box;
 }
 body {
     height: 100vh;
@@ -31,18 +31,23 @@ h3 {
     font-size: 25px;
     text-align: center;
 }
+h4 {
+    font-size: 50px;
+    text-align: center;
+    margin: 25px;
+}
 .beginning {
     width: 80vw;
     margin: 25px auto;
     border-radius: 15px;
     background-color: white;
-    padding: 10px;
+    padding: 25px;
     
 }
 button {
     width: 250px;
     height: 150px;
-    margin: 25px;
+    /* margin: 25px; */
     border-radius: 15px;
     font-weight: bold;
     font-size: 40px;

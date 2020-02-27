@@ -1,9 +1,17 @@
-<h1>Marvel Quiz</h1> 
+<h4>Welcome to the Marvel Quiz!</h4> 
 
-<div>
+<!-- <div>
     <div id="question">{{marvel.Question}}</div>    
     <div>
         <div class="choice" (onclick)="checkAnswer()">{{marvel.Answers}}</div>
     </div>
     <button (onclick)="next"></button>
+</div> -->
+
+<div>
+    <div id="question"><span class="q-and-a">Q: </span>Question</div>    
+    <div>
+        <div class="choice" (onclick)="checkAnswer()"><span class="q-and-a">A: </span>Answers</div>
+    </div>
+    <button (onclick)="next">Check Answer</button>
 </div>

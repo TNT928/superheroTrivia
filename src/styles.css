@@ -8,6 +8,7 @@ html {
 }
 * {
     font-family: "Comic Sans MS", cursive, sans-serif;
+    box-sizing: border-box;
 }
 body {
     height: 100vh;

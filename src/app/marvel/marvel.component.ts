@@ -15,39 +15,32 @@ export class MarvelComponent implements OnInit {
 
   marvel = [
     {Question: 'How did Spider-Man get his superpowers?',
-    Answer: {
-      correct: 'Bitten by radioactive spider',
-      wrong: ['Killed a radioactive spider', 'Ate a radioactive spider', 'Let a radioactive spider burrow inside my skin']}
+    Answer: ['Bitten by radioactive spider', 'Killed a radioactive spider', 'Ate a radioactive spider', 'Let a radioactive spider burrow inside my skin'],
+    Correct: 'Bitten by radioactive spider'
     },
     {Question: 'How many films were made with Hugh Jackman playing the Wolverine character?',
-    Answers: {
-      correct: 'Nine',
-      wrong: ['Four', 'Seven', 'Five']}
+    Answers: ['Nine','Four', 'Seven', 'Five'],
+    Correct: 'Nine'
     },
     {Question: 'Who played the Wonder Woman in the 2017 remake?',
-    Answers: {
-      correct: 'Gal Gadot',
-      wrong: ['Catherine Zeta-Jones', 'Angelina Jolie', 'Sandra Bullock']}
+    Answers: ['Gal Gadot', 'Catherine Zeta-Jones', 'Angelina Jolie', 'Sandra Bullock'],
+    Correct: 'Gal Gadot'
     },
     {Question: 'Which newspaper does Peter Parker work for?',
-    Answers: {
-      correct: 'The Daily Prophet',
-      wrong: ['The Daily News', 'The Prophet', 'Metro News']}
+    Answers: ['The Daily Prophet', 'The Daily News', 'The Prophet', 'Metro News'],
+    Correct: 'The Daily Prophet'
     },
     {Question: 'What actor played Ant-Man?',
-    Answers: {
-      correct: 'Paul Rudd',
-      wrong: ['Joseph Gordon-Levitt', 'Sean Bean', 'Ewan McGregor']}
+    Answers: ['Paul Rudd', 'Joseph Gordon-Levitt', 'Sean Bean', 'Ewan McGregor'],
+    Correct: 'Paul Rudd'
     },
     {Question: 'Who does Bruce Banner become?',
-    Answer: {
-      correct: 'The Hulk',
-      wrong: ['Loki', 'Wolverine', 'Deadpool']}
+    Answer: ['The Hulk', 'Loki', 'Wolverine', 'Deadpool'],
+    Correct: 'The Hulk'
     },
     {Question: 'The Fantastic Four have the headquarters in what building?',
-    Answer: {
-      correct: 'Baxter Building',
-      wrong: ['Fantastic Headquarters', 'Stark Tower', 'Insititute']}
+    Answer: ['Baxter Building', 'Fantastic Headquarters', 'Stark Tower', 'Insititute'],
+    Correct: 'Baxter Building'
     }
   ];
 
@@ -57,10 +50,14 @@ export class MarvelComponent implements OnInit {
   }
 
   checkAnswer(marvel){
-    if(marvel.Answer === "correct"){
-      return true;
-    } else {
+    if(marvel.Answers === !marvel.Correct){
       return false;
+    } else {
+      return true;
     };
+  };
+
+  next(marvel){
+    return marvel.Question[Math.floor(Math.random() * Math.floor(marvel.length))];
   }
 }

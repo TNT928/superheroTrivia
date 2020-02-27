@@ -19,7 +19,6 @@ const AppRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-
     MarvelComponent,
     MoviesVsComicsComponent,
     MainPageComponent

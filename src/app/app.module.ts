@@ -3,6 +3,7 @@ import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DcQuestionsComponent } from './dc-questions/dc-questions.component';
 import { MarvelComponent } from './marvel/marvel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
@@ -17,14 +18,15 @@ const AppRoutes: Routes = [
   { path: '/', component: MainPageComponent }
 ]
 import { DcQuestionsComponent } from './dc-questions/dc-questions.component';
+import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DcQuestionsComponent,
     MarvelComponent,
     MoviesVsComicsComponent,
-    MainPageComponent,
-    DcQuestionsComponent
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 export class Question{
-    question:string
+    question: string;
+    answers: Answer[];
 }
 export class Answer{
    correct?:boolean;

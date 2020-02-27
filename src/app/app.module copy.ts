@@ -13,10 +13,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 @NgModule({
   declarations: [
     AppComponent,
+    DcQuestionsComponent,
     MarvelComponent,
     MoviesVsComicsComponent,
-    MainPageComponent,
-    DcQuestionsComponent
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

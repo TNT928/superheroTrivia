@@ -8,9 +8,9 @@ import { Question, Answer } from "../../../models/DCquestions";
 })
 export class DcQuestionsComponent implements OnInit {
   questions: Question[];
-  question1: Answer[];
-  question2: Answer[];
-  question3: Answer[];
+  // question1: Answer[];
+  // question2: Answer[];
+  // question3: Answer[];
   clicked: boolean = false;
 
   constructor() {}
@@ -49,6 +49,14 @@ export class DcQuestionsComponent implements OnInit {
   askQuestion() {
     this.clicked = true;
   }
+onclick(){
+    this.questions
+  }
+
+
+
+}
+
+
 
   
-}

@@ -19,15 +19,14 @@ const AppRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-
-    MarvelComponent
+    MarvelComponent,
     MoviesVsComicsComponent,
     MainPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [],

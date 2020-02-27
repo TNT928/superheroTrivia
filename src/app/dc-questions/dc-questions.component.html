@@ -5,10 +5,11 @@
 <div *ngIf="clicked">
     <div *ngFor="let question of questions">
             <h1 >{{question.question}}</h1>
-            <h4  *ngFor="let answer of question.answers">{{answer.answer}}
-              <input type="checkbox">  
+            <h4  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
+              <input name="answer" type="radio" value= "answer.correct">  
             </h4>
     </div>
   
+    <button (click)=onClick()>Submit</button>
 </div>
 

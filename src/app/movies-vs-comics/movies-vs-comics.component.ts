@@ -43,4 +43,13 @@ export class MoviesVsComicsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  getAnswer(answer:string, index: number){
+    if (answer !== answer){
+      return "Wrong!"; //Add modal popup that is triggered by this function??
+      this.comicsQuestions.splice(index, 1);
+    } else {
+      return "Right!";
+    }
+  };
 }

@@ -13,7 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const AppRoutes: Routes = [
   { path: 'marvel', component: MarvelComponent },
- { path: 'dc', component: dc-component },
+  { path: 'dc', component: DcQuestionsComponent },
   { path: 'comicsvsmovies', component: MoviesVsComicsComponent },
   { path: '', component: MainPageComponent }
 ]

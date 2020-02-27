@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MarvelComponent } from './marvel/marvel.component';
-
-import { MarvelComponent } from './marvel/marvel.component';
 import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DcQuestionsComponent } from './dc-questions/dc-questions.component';

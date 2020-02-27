@@ -10,6 +10,7 @@ import { MarvelComponent } from './marvel/marvel.component';
 import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AnswersComponent } from './answers/answers.component';
 
 const AppRoutes: Routes = [
   { path: 'marvel', component: MarvelComponent },
@@ -24,7 +25,8 @@ const AppRoutes: Routes = [
     MarvelComponent,
     MoviesVsComicsComponent,
     MainPageComponent,
-    DcQuestionsComponent
+    DcQuestionsComponent,
+    AnswersComponent,
   ],
   imports: [
     BrowserModule,

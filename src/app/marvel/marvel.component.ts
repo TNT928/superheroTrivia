@@ -15,7 +15,7 @@ export class MarvelComponent implements OnInit {
 
   marvel = [
     {Question: 'How did Spider-Man get his superpowers?',
-    Answer: ['Bitten by radioactive spider', 'Killed a radioactive spider', 'Ate a radioactive spider', 'Let a radioactive spider burrow inside my skin'],
+    Answers: ['Killed a radioactive spider', 'Bitten by radioactive spider', 'Ate a radioactive spider', 'Let a radioactive spider burrow inside my skin'],
     Correct: 'Bitten by radioactive spider'
     },
     {Question: 'How many films were made with Hugh Jackman playing the Wolverine character?',
@@ -23,7 +23,7 @@ export class MarvelComponent implements OnInit {
     Correct: 'Nine'
     },
     {Question: 'Who played the Wonder Woman in the 2017 remake?',
-    Answers: ['Gal Gadot', 'Catherine Zeta-Jones', 'Angelina Jolie', 'Sandra Bullock'],
+    Answers: [ 'Catherine Zeta-Jones', 'Angelina Jolie', 'Gal Gadot', 'Sandra Bullock'],
     Correct: 'Gal Gadot'
     },
     {Question: 'Which newspaper does Peter Parker work for?',
@@ -31,33 +31,36 @@ export class MarvelComponent implements OnInit {
     Correct: 'The Daily Prophet'
     },
     {Question: 'What actor played Ant-Man?',
-    Answers: ['Paul Rudd', 'Joseph Gordon-Levitt', 'Sean Bean', 'Ewan McGregor'],
+    Answers: ['Joseph Gordon-Levitt', 'Sean Bean', 'Ewan McGregor', 'Paul Rudd'],
     Correct: 'Paul Rudd'
     },
     {Question: 'Who does Bruce Banner become?',
-    Answer: ['The Hulk', 'Loki', 'Wolverine', 'Deadpool'],
+    Answers: [ 'Loki', 'The Hulk', 'Wolverine', 'Deadpool'],
     Correct: 'The Hulk'
     },
     {Question: 'The Fantastic Four have the headquarters in what building?',
-    Answer: ['Baxter Building', 'Fantastic Headquarters', 'Stark Tower', 'Insititute'],
+    Answers: ['Fantastic Headquarters', 'Stark Tower', 'Baxter Building', 'Insititute'],
     Correct: 'Baxter Building'
     }
   ];
 
+  question: any;
+
   constructor() { }
 
   ngOnInit() {
+    this.next();
   }
 
-  checkAnswer(marvel){
-    if(marvel.Answers === !marvel.Correct){
-      return false;
+  checkAnswer(answer, question){
+    if(answer === question.Correct){
+      console.log('correct');
     } else {
-      return true;
+      console.log('incorrect');
     };
   };
 
-  next(marvel){
-    return marvel.Question[Math.floor(Math.random() * Math.floor(marvel.length))];
+  next(){
+    this.question =  this.marvel[Math.floor(Math.random() * Math.floor(this.marvel.length))];
   }
 }

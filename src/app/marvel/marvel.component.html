@@ -1,9 +1,10 @@
-<h1>Marvel Quiz</h1> 
+<h1>Marvel Quiz</h1>
 
-<div>
-    <div id="question">{{marvel.Question}}</div>    
-    <div>
-        <div class="choice" (onclick)="checkAnswer()">{{marvel.Answers}}</div>
+<div class="MarvelQ">
+    <div id="question">{{question.Question}}
+        <div>
+            <button class="choice" (click)="checkAnswer(answer, question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+        </div>
     </div>
-    <button (onclick)="next"></button>
+    <button class="next" (click)="next()">Next Question</button>
 </div>

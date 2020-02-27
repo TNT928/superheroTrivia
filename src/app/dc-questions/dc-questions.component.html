@@ -1,0 +1,14 @@
+<h1>Welcome to DC Category</h1>
+
+<button (click)= askQuestion() >Begin</button>
+
+<div *ngIf="clicked">
+    <div *ngFor="let question of questions">
+            <h1 >{{question.question}}</h1>
+            <h4  *ngFor="let answer of question.answers">{{answer.answer}}
+              <input type="checkbox">  
+            </h4>
+    </div>
+  
+</div>
+

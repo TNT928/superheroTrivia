@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { DcQuestionsComponent } from './dc-questions/dc-questions.component';
 import { MarvelComponent } from './marvel/marvel.component';
 import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -12,6 +13,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 @NgModule({
   declarations: [
     AppComponent,
+    DcQuestionsComponent,
     MarvelComponent,
     MoviesVsComicsComponent,
     MainPageComponent

@@ -32,16 +32,23 @@ export class MoviesVsComicsComponent implements OnInit {
     Correct:"Hank Pym"}
   ];
 
+  question: any;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.next();
+  }
 
-  getAnswer(answer:string, index: number){
-    if (answer !== answer){
-      return "Wrong!"; //Add modal popup that is triggered by this function??
-      this.moviesVsComics.splice(index, 1);
+  checkAnswer(answer, question){
+    if(answer === question.Correct){
+      alert('Correct!');
     } else {
-      return "Right!";
-    }
+      alert('Incorrect!')
+    };
   };
+
+  next(){
+    this.question =  this.moviesVsComics[Math.floor(Math.random() * Math.floor(this.moviesVsComics.length))];
+  }
 }

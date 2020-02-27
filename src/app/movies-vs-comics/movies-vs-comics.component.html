@@ -1,5 +1,13 @@
 <h4>Welcome to the Movies Vs. Comics Quiz!</h4> 
 
 <div>
-    <div>Question</div>
+    <div>
+        <span>{{question.Question}}</span>
+    </div>
+    <button (click)="checkAnswer(answer,question)" *ngFor="let correct of question.answers">{{correct}}</button>
+    <button (click)="checkAnswer(answer,question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+    <button (click)="next()">Next Question</button>
 </div>
+
+<!--Click on answer button, which immediately responds with either correct
+or incorrect, button at bottom of -->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Question, Answer } from "../../../models/DCquestions";
+import { Question } from "../../../models/DCquestions";
 
 @Component({
   selector: "app-dc-questions",
@@ -8,9 +8,9 @@ import { Question, Answer } from "../../../models/DCquestions";
 })
 export class DcQuestionsComponent implements OnInit {
   questions: Question[];
-  question1: Answer[];
-  question2: Answer[];
-  question3: Answer[];
+  // question1: Answer[];
+  // question2: Answer[];
+  // question3: Answer[];
   clicked: boolean = false;
 
   constructor() {}
@@ -48,7 +48,4 @@ export class DcQuestionsComponent implements OnInit {
 
   askQuestion() {
     this.clicked = true;
-  }
-
-  
-}
+  }}

@@ -3,13 +3,18 @@
 <button (click)= askQuestion() >Begin</button>
 
 <div *ngIf="clicked">
-    <div *ngFor="let question of questions">
-            <h1 >{{question.question}}</h1>
-            <h4  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
-              <input name="answer" type="radio" value= "answer.correct">  
-            </h4>
-    </div>
+    <form >
+            <div *ngFor="let question of questions">
+                    <h1 >{{question.question}}</h1>
+                    <h4  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
+                      <input name="selectedAnswer" [(ngModel)]="selectedAnswer" [value]="answer"  type="radio">  
+                    </h4>
+                    <h3 *ngIf="selectedAnswer && selectedAnswer.correct">Correct</h3>
+
+                    <!-- <button (click)="onClick(selectedAnswer)">Submit</button> -->
+            </div>
+    </form>
+
   
-    <button (click)=onClick()>Submit</button>
 </div>
 

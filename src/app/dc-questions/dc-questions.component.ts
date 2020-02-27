@@ -42,6 +42,20 @@ export class DcQuestionsComponent implements OnInit {
       { correct: false, answer: "Clayface" },
       { correct: false, answer: "King Shark" },
       { correct: true, answer: "Scarface" }
+    ]},
+      { question: "Who causes Batgirl to become Oracle",
+    answers:  [
+      { correct: false, answer: "Two-Face" },
+      { correct: false, answer: "Harley Quinn" },
+      { correct: true, answer: "The Joker" },
+      { correct: false, answer: "Bane" }
+    ]},
+      { question: "What was the Jokers orginal crime persona?",
+    answers:  [
+      { correct: true, answer: "The Red Hood" },
+      { correct: false, answer: "Jester Man" },
+      { correct: false, answer: "Arkham Knight" },
+      { correct: false, answer: "The Riddler" }
     ]}
     ];
   }
@@ -49,8 +63,9 @@ export class DcQuestionsComponent implements OnInit {
   askQuestion() {
     this.clicked = true;
   }
-onclick(){
-    this.questions
+
+onClick(question){
+  console.log(question.correct);
   }
 
 

@@ -3,6 +3,8 @@ import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MarvelComponent } from './marvel/marvel.component';
+import { HttpClientModule } from '@angular/common/http';
 import { MoviesVsComicsComponent } from './movies-vs-comics/movies-vs-comics.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
@@ -17,12 +19,15 @@ const AppRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+
+    MarvelComponent,
     MoviesVsComicsComponent,
     MainPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [],

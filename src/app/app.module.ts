@@ -11,9 +11,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const AppRoutes: Routes = [
-  // { path: 'marvel', component: marvel-component },
-  // { path: 'dc', component: dc-component },
-  // { path: 'comicsvsmovies', component: comics-vs-movies-component }
+  { path: 'marvel', component: MarvelComponent },
+  { path: 'dc', component: dc-component },
+  { path: 'comicsvsmovies', component: MoviesVsComicsComponent },
+  { path: '/', component: MainPageComponent }
 ]
 
 @NgModule({

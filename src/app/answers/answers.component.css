@@ -1,0 +1,15 @@
+span {
+    display: flex;
+    flex-direction: column;
+}
+
+.material-icons {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 230px;
+}
+
+button {
+    background-color: white;
+    color: black;
+}

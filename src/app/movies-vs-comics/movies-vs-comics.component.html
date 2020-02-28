@@ -4,9 +4,9 @@
     <div>
         <span>{{question.Question}}</span>
     </div>
-    <button (click)="checkAnswer(answer,question)" *ngFor="let correct of question.answers">{{correct}}</button>
+    
     <button (click)="checkAnswer(answer,question)" *ngFor="let answer of question.Answers">{{answer}}</button>
-    <button (click)="next()">Next Question</button>
+    <button (click)="next()">NEXT QUESTION</button>
 </div>
 
 <!--Click on answer button, which immediately responds with either correct

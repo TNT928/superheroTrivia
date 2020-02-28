@@ -12,9 +12,6 @@ export class AnswersComponent implements OnInit {
   @Input()
   marvel : MarvelComponent;
 
-  // @Input()
-  // open : boolean = false;
-
   @Input()
   correct : boolean = false;
 

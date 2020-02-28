@@ -57,16 +57,24 @@ export class DcQuestionsComponent implements OnInit {
   ];
 
   clicked: boolean = false;
-  question: any;
-
+  // question: any;
+dcQuestions: any
+dcAnswers:any
   constructor() {}
+  question : any;
 
+
+  questionNumber : number = 0;
   ngOnInit() {
     this.next();
   }
 
   askQuestion() {
     this.clicked = true;
+    // this.dcQuestions = this.questions[this.questionNumber].question;
+    // this.questionNumber++;
+    // console.log(this.dcQuestions)
+  
   }
 
   onClick(question) {
@@ -74,6 +82,9 @@ export class DcQuestionsComponent implements OnInit {
   }
 
   next() {
-    [Math.floor(Math.random() * Math.floor(this.questions.length))];
+    const index = Math.floor(Math.random() * Math.floor(this.questions.length));
+    this.question = this.questions[index];
+    this.questions.splice(index, 1);
+    console.log(this.question);
   }
 }

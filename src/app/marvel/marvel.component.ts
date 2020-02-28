@@ -71,7 +71,11 @@ export class MarvelComponent implements OnInit {
   };
 
   next(){
+    this.open = false;
     this.question =  this.marvel[Math.floor(Math.random() * Math.floor(this.marvel.length))];
   }
 
+  closePopup(){
+    this.open = false;
+  }
 }

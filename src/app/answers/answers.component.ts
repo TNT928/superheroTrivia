@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { MarvelComponent } from '../marvel/marvel.component';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-answers',
@@ -11,27 +12,26 @@ export class AnswersComponent implements OnInit {
   @Input()
   marvel : MarvelComponent;
 
-  @Input()
-  open : boolean = false;
+  // @Input()
+  // open : boolean = false;
 
   @Input()
   correct : boolean = false;
+
+  @Output()
+  close = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  openModal() {
-    if(this.open === false){
-    this.open = true;
-  } else {
-    this.open = false;
-  }  
+  closeModal() {
+    this.close.emit();
   }  
 
-closePopout(){
-  this.open = false;
-}
+  // closePopout(){
+  //   this.open = false;
+  // }
 
 }

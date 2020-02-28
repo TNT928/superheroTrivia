@@ -1,13 +1,5 @@
 <h4>Welcome to the Marvel Quiz!</h4> 
 
-<!-- <div>
-    <div id="question">{{marvel.Question}}</div>    
-    <div>
-        <div class="choice" (onclick)="checkAnswer()">{{marvel.Answers}}</div>
-    </div>
-    <button (onclick)="next"></button>
-</div> -->
-
 <div class="MarvelQ">
     <div id="question"><span class="q-and-a">Q: </span>{{question.Question}}</div>    
         <button class="choice" (click)="checkAnswer(answer, question)" *ngFor="let answer of question.Answers"><span class="q-and-a">A: </span>{{answer}}</button>

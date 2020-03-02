@@ -1,6 +1,6 @@
 <div (click)="closeModal()">
     <span>
-        <i class="material-icons" (click)="closePopout()">close</i>
-        <button>{{correct}}</button>
+        <!-- <i class="material-icons" (click)="closePopout()">close</i> -->
+        <div class="button" [ngClass]="{'correct' : correct, 'not-correct' : !correct}">{{correct}}</div>
     </span>
 </div>

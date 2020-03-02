@@ -8,6 +8,9 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./answers.component.css']
 })
 export class AnswersComponent implements OnInit {
+  
+  @Input()
+  open : boolean = true;
 
   @Input()
   marvel : MarvelComponent;
@@ -27,8 +30,8 @@ export class AnswersComponent implements OnInit {
     this.close.emit();
   }  
 
-  // closePopout(){
-  //   this.open = false;
-  // }
+  closePopout(){
+    this.open = false;
+  }
 
 }

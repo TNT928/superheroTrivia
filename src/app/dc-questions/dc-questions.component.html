@@ -21,3 +21,27 @@
     <button class="next" (click)="next()">Next Question</button>
   </div>
 </div>
+
+
+
+<!-- <button (click)="askQuestion()">Begin</button>
+
+<div *ngIf="questions.length">
+        <div *ngIf="clicked">
+                <form >
+                        <div >
+                                <p >{{question.question}}</p>
+                                <p  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
+                                <input name="selectedAnswer" [(ngModel)]="selectedAnswer" [value]="answer"  type="radio">  
+                                </p>
+                                <h3 *ngIf="selectedAnswer && selectedAnswer.correct">Correct</h3>
+                                <button (click)= next()>Next Question</button>
+                        </div>
+                </form>
+        
+        </div>
+</div>
+
+<div *ngIf="!questions.length">
+        You're Done
+</div> -->

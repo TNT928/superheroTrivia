@@ -78,24 +78,64 @@ export class DcQuestionsComponent implements OnInit {
   // onclick(){
   //   this.questions;
   // }
-
+  
   ngOnInit() {
     this.next();
   }
-
+  
   checkAnswer(answer, question){
     this.open = true;
     this.correct = (answer === question.Correct);
   };
-
+  
   next(){
     this.open = false;
     this.question =  this.dc[Math.floor(Math.random() * Math.floor(this.dc.length))];
   }
   
+  //   clicked: boolean = false;
+  //   // question: any;
+  // dcQuestions: any
+  // dcAnswers:any
+  //   constructor() {}
+  //   question : any;
   
   
+  
+  //   questionNumber : number = 0;
+  //   ngOnInit() {
+  //     this.next();
+  //   }
+  
+  // ngOnInit() {
+  //   this.next();
+  // }
+  
+  // checkAnswer(answer, question){
+  //   this.open = true;
+  //   this.correct = (answer === question.Correct);
+  // };
+  
+  // next(){
+  //   this.open = false;
+  //   this.question =  this.dc[Math.floor(Math.random() * Math.floor(this.dc.length))];
+  // }
+  
+  //   onClick(question) {
+  //     console.log(question.correct);
+  //   }
+  
+  //   next() {
+  //     const index = Math.floor(Math.random() * Math.floor(this.questions.length));
+  //     this.question = this.questions[index];
+  //     this.questions.splice(index, 1);
+  //     console.log(this.question);
+  //   }
+  // askQuestion() {
+  //   this.clicked = true;
+  //   // this.dcQuestions = this.questions[this.questionNumber].question;
+  //   // this.questionNumber++;
+  //   // console.log(this.dcQuestions)
+  
+  // }
 }
-
-
-

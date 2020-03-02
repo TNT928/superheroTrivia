@@ -47,7 +47,7 @@ h4 {
 button {
     width: 250px;
     height: 150px;
-    /* margin: 25px; */
+    margin: 25px;
     border-radius: 15px;
     font-weight: bold;
     font-size: 40px;

@@ -11,6 +11,7 @@
 <div class="MarvelQ">
     <div id="question"><span class="q-and-a">Q: </span>{{question.Question}}</div>    
         <button class="choice" (click)="checkAnswer(answer, question)" *ngFor="let answer of question.Answers"><span class="q-and-a">A: </span>{{answer}}</button>
-    <button (onclick)="check()">Check Answer</button>
+        <app-answers [open]="open" [correct]="correct"></app-answers>
+        <!-- <button (onclick)="check()">Check Answer</button> -->
     <button class="next" (click)="next()">Next Question</button>
 </div>

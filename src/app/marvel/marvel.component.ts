@@ -13,11 +13,11 @@ export class MarvelComponent implements OnInit {
   @Input()
   Answers : boolean;
 
-  @Input()
-  Correct : string;
+  // @Input()
+  // Correct : string;
 
-  @Input()
-  open : boolean = false;
+  // @Input()
+  // open : boolean = false;
 
   marvel = [
     {Question: 'How did Spider-Man get his superpowers?',
@@ -51,6 +51,8 @@ export class MarvelComponent implements OnInit {
   ];
 
   question: any;
+  open : boolean = false;
+  correct : boolean = false;
 
   constructor() { }
 
@@ -59,11 +61,13 @@ export class MarvelComponent implements OnInit {
   }
 
   checkAnswer(answer, question){
-    if(answer === question.Correct){
-      prompt('Correct!');
-    } else {
-      prompt('Incorrect!')
-    };
+    // if(answer === question.Correct){
+    //   prompt('Correct!');
+    // } else {
+    //   prompt('Incorrect!')
+    // };
+    this.open = true;
+    this.correct = (answer === question.Correct);
   };
 
   next(){

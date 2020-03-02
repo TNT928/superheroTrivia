@@ -14,6 +14,9 @@ export class AnswersComponent implements OnInit {
   @Input()
   open : boolean = false;
 
+  @Input()
+  correct : boolean = false;
+
   constructor() { }
 
   ngOnInit() {

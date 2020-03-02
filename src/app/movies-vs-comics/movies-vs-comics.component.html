@@ -5,7 +5,7 @@
         <span>{{question.Question}}</span>
     </div>
     
-    <button (click)="checkAnswer(answer,question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+    <button (click)="checkAnswer(answer,question)" (click)="keepScore()" *ngFor="let answer of question.Answers">{{answer}}</button>
     <button (click)="next()">NEXT QUESTION</button>
 </div>
 

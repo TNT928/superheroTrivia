@@ -33,6 +33,7 @@ export class MoviesVsComicsComponent implements OnInit {
   ];
 
   question: any;
+  score: number;
 
   constructor() {}
 
@@ -50,5 +51,15 @@ export class MoviesVsComicsComponent implements OnInit {
 
   next(){
     this.question =  this.moviesVsComics[Math.floor(Math.random() * Math.floor(this.moviesVsComics.length))];
+  }
+
+  keepScore(){
+    let score = 0;
+    if (this.Answers === this.question.Correct){
+      score++;
+    };
+    if (score => 5){
+      alert("You're a nerd! Congrats!")
+    };
   }
 }

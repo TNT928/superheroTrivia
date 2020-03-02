@@ -1,11 +1,23 @@
 <h4>Welcome to the Movies Vs. Comics Quiz!</h4> 
 
-<div>
+<!-- <div>
     <div>
         <span>{{question.Question}}</span>
     </div>
     
     <button (click)="checkAnswer(answer,question)" (click)="keepScore()" *ngFor="let answer of question.Answers">{{answer}}</button>
     <button (click)="next()">NEXT QUESTION</button>
-</div>
+</div> -->
 
+<!--Click on answer button, which immediately responds with either correct
+or incorrect, button at bottom of -->
+
+
+<div class="MarvelQ">
+    <div id="question" class="q-and-a">Q: {{question.Question}}</div>    
+    <button class="choice" (click)="checkAnswer(answer, question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+    <span [ngClass]="{'open' : open, 'not-open' : !open}">
+      <div class="button" [ngClass]="{'correct' : correct, 'not-correct' : !correct}" (click)="closeModal()">{{correct}}</div>
+    </span>
+    <button class="next" (click)="next()">Next Question</button>
+  </div>

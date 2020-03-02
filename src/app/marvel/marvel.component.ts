@@ -7,17 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MarvelComponent implements OnInit {
 
+  question: any;
+  open : boolean = false;
+  correct : boolean = false;
+
+
   @Input()
   Question : string;
 
   @Input()
   Answers : boolean;
-
-  // @Input()
-  // Correct : string;
-
-  // @Input()
-  // open : boolean = false;
 
   marvel = [
     {Question: 'How did Spider-Man get his superpowers?',
@@ -50,10 +49,6 @@ export class MarvelComponent implements OnInit {
     }
   ];
 
-  question: any;
-  open : boolean = false;
-  correct : boolean = false;
-
   constructor() { }
 
   ngOnInit() {
@@ -61,17 +56,16 @@ export class MarvelComponent implements OnInit {
   }
 
   checkAnswer(answer, question){
-    // if(answer === question.Correct){
-    //   prompt('Correct!');
-    // } else {
-    //   prompt('Incorrect!')
-    // };
     this.open = true;
     this.correct = (answer === question.Correct);
   };
 
   next(){
+    this.open = false;
     this.question =  this.marvel[Math.floor(Math.random() * Math.floor(this.marvel.length))];
   }
 
+  // closePopup(){
+  //   this.open = false;
+  // }
 }

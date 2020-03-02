@@ -1,15 +1,47 @@
 <h4>Welcome to the DC Quiz!</h4> 
 
-<button (click)= askQuestion() >Begin</button>
+<button (click)= askQuestion() [ngClass]="{'clicked' : clicked, 'not-clicked' : !clicked}">Begin</button>
+
+<!-- <div *ngIf="clicked">
+  <div *ngFor="let question of questions">
+    <h3>{{question.question}}</h3>
+    <p *ngFor="let answer of question.answers; index as i;"><input name="answer" type="radio" value= "answer.correct">{{answer.answer}}</p>
+  </div>
+  
+  <button (click)=onClick()>Submit</button>
+</div> -->
 
 <div *ngIf="clicked">
-    <div *ngFor="let question of questions">
-            <h1 >{{question.question}}</h1>
-            <h4  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
-              <input name="answer" type="radio" value= "answer.correct">  
-            </h4>
-    </div>
-  
-    <button (click)=onClick()>Submit</button>
+  <div class="MarvelQ">
+    <div id="question" class="q-and-a">Q: {{question.Question}}</div>    
+    <button class="choice" (click)="checkAnswer(answer, question)" *ngFor="let answer of question.Answers">{{answer}}</button>
+    <span [ngClass]="{'open' : open, 'not-open' : !open}">
+      <div class="button" [ngClass]="{'correct' : correct, 'not-correct' : !correct}" (click)="closeModal()">{{correct}}</div>
+    </span>
+    <button class="next" (click)="next()">Next Question</button>
+  </div>
 </div>
 
+
+
+<!-- <button (click)="askQuestion()">Begin</button>
+
+<div *ngIf="questions.length">
+        <div *ngIf="clicked">
+                <form >
+                        <div >
+                                <p >{{question.question}}</p>
+                                <p  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
+                                <input name="selectedAnswer" [(ngModel)]="selectedAnswer" [value]="answer"  type="radio">  
+                                </p>
+                                <h3 *ngIf="selectedAnswer && selectedAnswer.correct">Correct</h3>
+                                <button (click)= next()>Next Question</button>
+                        </div>
+                </form>
+        
+        </div>
+</div>
+
+<div *ngIf="!questions.length">
+        You're Done
+</div> -->

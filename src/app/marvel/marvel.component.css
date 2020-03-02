@@ -1,5 +1,6 @@
 h4 {
     color: red;
+    font-size: 35px;
 }
 
 button.choice {
@@ -39,9 +40,15 @@ button:active {
 .q-and-a {
     font-size: 20px;
     font-weight: bold;
-    color: grey;
 }
   
 #question {
     background: white;
+}
+
+.MarvelQ {
+    text-align: center;
+}
+button {
+    font-weight: normal;
 }

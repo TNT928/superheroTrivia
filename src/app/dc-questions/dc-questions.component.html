@@ -6,13 +6,12 @@
         <div *ngIf="clicked">
                 <form >
                         <div >
-                                <h1 >{{question.question}}</h1>
-                                <h4  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
+                                <p >{{question.question}}</p>
+                                <p  *ngFor="let answer of question.answers; index as i;">{{answer.answer}}
                                 <input name="selectedAnswer" [(ngModel)]="selectedAnswer" [value]="answer"  type="radio">  
-                                </h4>
+                                </p>
                                 <h3 *ngIf="selectedAnswer && selectedAnswer.correct">Correct</h3>
                                 <button (click)= next()>Next Question</button>
-                                <!-- <button (click)="onClick(selectedAnswer)">Submit</button> -->
                         </div>
                 </form>
         
@@ -20,7 +19,7 @@
 </div>
 
 <div *ngIf="!questions.length">
-        You're done
+        You're Done
 </div>
 
 

@@ -41,3 +41,7 @@ button:active {
     font-weight: bold;
     color: grey;
 }
+  
+#question {
+    background: white;
+}

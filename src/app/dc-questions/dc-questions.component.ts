@@ -7,7 +7,6 @@ import { Question, Answer } from "../../../models/DCquestions";
   styleUrls: ["./dc-questions.component.css"]
 })
 export class DcQuestionsComponent implements OnInit {
-  // questions: Question[];
   questions = [
     {
       question: "Who is Batman",
@@ -37,7 +36,7 @@ export class DcQuestionsComponent implements OnInit {
       ]
     },
     {
-      question: "Who causes Batgirl to become Oracle",
+      question: "Who causes Batgirl to become Oracle?",
       answers: [
         { correct: false, answer: "Two-Face" },
         { correct: false, answer: "Harley Quinn" },
@@ -62,6 +61,7 @@ dcQuestions: any
 dcAnswers:any
   constructor() {}
   question : any;
+  
 
 
   questionNumber : number = 0;

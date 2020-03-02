@@ -24,3 +24,23 @@ button:hover {
     font-weight: bold;
     color: grey;
 }
+
+.correct{
+    height: 200px;
+    width: 5em;
+    margin: 0 auto;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 30px;
+    align-self: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+   
+    background-color: blue;
+    color: white;
+    font-size: 5em;
+    z-index: 10;
+    border-radius: 5px;
+}

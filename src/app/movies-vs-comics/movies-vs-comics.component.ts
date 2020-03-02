@@ -6,9 +6,14 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./movies-vs-comics.component.css"]
 })
 export class MoviesVsComicsComponent implements OnInit {
+  question: any;
+  open : boolean = false;
+  correct : boolean = false;
+
   @Input() Question : string;
   @Input() Answers : string;
   @Input() Correct : string;
+  
   
   moviesVsComics = [
     {
@@ -42,9 +47,7 @@ export class MoviesVsComicsComponent implements OnInit {
       Correct:"Hank Pym"
     }
   ];
-  
-  question: any;
-  
+    
   constructor() {}
   
   ngOnInit() {
@@ -52,14 +55,12 @@ export class MoviesVsComicsComponent implements OnInit {
   }
   
   checkAnswer(answer, question){
-    if(answer === question.Correct){
-      alert('Correct!');
-    } else {
-      alert('Oh boo dawg, that aint it')
-    };
+    this.open = true;
+    this.correct = (answer === question.Correct);
   };
   
   next(){
+    this.open = false;
     this.question =  this.moviesVsComics[Math.floor(Math.random() * Math.floor(this.moviesVsComics.length))];
   }
 }

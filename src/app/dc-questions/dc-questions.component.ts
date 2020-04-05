@@ -11,6 +11,7 @@ export class DcQuestionsComponent implements OnInit {
   // question1: Answer[];
   // question2: Answer[];
   // question3: Answer[];
+  closeModal;
   clicked: boolean = false;
   
   question: any;

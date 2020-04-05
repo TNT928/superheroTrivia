@@ -9,7 +9,7 @@ export class MoviesVsComicsComponent implements OnInit {
   question: any;
   open : boolean = false;
   correct : boolean = false;
-
+  closeModal;
   @Input() Question : string;
   @Input() Answers : string;
   @Input() Correct : string;
